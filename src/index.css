@@ -1,0 +1,222 @@
+/**
+ *  Table of Content
+ *
+ *  # General
+ *  # Header
+ *  # Sider
+ *  # Content
+ *  # Footer
+ */
+
+/**
+ *  # General
+ */
+ * {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+}
+html,
+body {
+  font-size: 14px;
+  min-height: 100%;
+}
+#root,
+.ant-layout {
+  min-height: 100%;
+}
+#root .ant-layout.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+  background: #f3f6f9;
+  height: calc(100vh - 64px);
+}
+
+/**
+ *  # Header
+ */
+.ant-layout-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-bottom: 1px solid rgba(217, 219, 228, 0.5);
+}
+.ant-layout-header .left-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ant-layout-header .right-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ant-layout-header .main-logo {
+  flex: 1 1 325px;
+  width: 325px;
+}
+.ant-layout-header .main-logo img {
+  width: auto;
+  height: 40px;
+}
+/* .ant-layout-header .ant-btn.ant-btn-icon-only svg {
+  width: 21px;
+  height: 21px;
+} */
+.ant-layout-header .ant-btn.ant-btn-icon-only svg path {
+  transition: all 0.1s ease;
+}
+.ant-layout-header .ant-btn.ant-btn-icon-only:hover svg path {
+  fill: #086db5;
+}
+
+/**
+ *  # Sider
+ */
+.custom-sider {
+  width: 56px;
+  padding: 16px 0;
+  background: #ffffff;
+  border-right: 1px solid rgba(217, 219, 228, 0.5);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.custom-sider.custom-sider-open,
+.custom-sider:hover {
+  width: 335px;
+  flex: 335px;
+}
+.custom-sider .ant-menu .ant-menu-item {
+  width: 100%;
+  line-height: 1.5;
+  color: #5e6278;
+  border-radius: 0 !important;
+  margin-inline: 0;
+  margin-block: 0;
+  margin: 0 0 5px;
+}
+.custom-sider .ant-menu .ant-menu-item > span,
+.custom-sider .ant-menu .ant-menu-submenu > .ant-menu-submenu-title > span,
+.custom-sider .ant-menu .ant-menu-submenu > .ant-menu-submenu-title i {
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.custom-sider:hover .ant-menu .ant-menu-item span,
+.custom-sider.custom-sider-open .ant-menu .ant-menu-item span,
+.custom-sider:hover .ant-menu .ant-menu-submenu > .ant-menu-submenu-title span,
+.custom-sider.custom-sider-open
+  .ant-menu
+  .ant-menu-submenu
+  > .ant-menu-submenu-title
+  span,
+.custom-sider:hover .ant-menu .ant-menu-submenu > .ant-menu-submenu-title i,
+.custom-sider.custom-sider-open
+  .ant-menu
+  .ant-menu-submenu
+  > .ant-menu-submenu-title
+  i {
+  opacity: 1;
+}
+.custom-sider .ant-menu > .ant-menu-item {
+  padding-inline: 0;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.custom-sider .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding-inline: 0;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  width: 100%;
+  border-radius: 0 !important;
+  margin-inline: 0;
+  margin-block: 0;
+  margin: 0 0 5px;
+}
+.custom-sider.custom-sider-open .ant-menu.ant-menu-sub .ant-menu-item,
+.custom-sider.custom-sider-open
+  .ant-menu.ant-menu-sub
+  .ant-menu-submenu
+  .ant-menu-submenu-title {
+  padding-left: 30px !important;
+}
+.custom-sider .ant-menu .ant-menu-item:hover,
+.custom-sider .ant-menu .ant-menu-submenu:hover > .ant-menu-submenu-title {
+  color: #217cbc !important;
+  background: rgba(33, 124, 188, 0.05) !important;
+}
+.custom-sider.custom-sider-open
+  .ant-menu.ant-menu-sub
+  .ant-menu.ant-menu-sub
+  .ant-menu-item,
+.custom-sider.custom-sider-open
+  .ant-menu.ant-menu-sub
+  .ant-menu.ant-menu-sub
+  .ant-menu-submenu
+  .ant-menu-submenu-title {
+  padding-left: 40px !important;
+}
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
+.ant-menu-inline.ant-menu-root
+  .ant-menu-submenu-title
+  > .ant-menu-title-content {
+  white-space: normal;
+  overflow: unset;
+  text-overflow: unset;
+}
+.custom-sider .ant-menu .ant-menu-item.ant-menu-item-selected {
+  color: #217cbc;
+}
+.custom-sider .ant-menu .ant-menu-item:hover svg path,
+.custom-sider
+  .ant-menu
+  .ant-menu-submenu:hover
+  > .ant-menu-submenu-title
+  svg
+  path,
+.custom-sider .ant-menu .ant-menu-item.ant-menu-item-selected svg path {
+  fill: #217cbc;
+}
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light > .ant-menu .ant-menu-item-selected {
+  background: transparent;
+}
+.custom-sider:not(.custom-sider-open)
+  .ant-menu
+  .ant-menu
+  .ant-menu
+  > .ant-menu-item {
+  display: none;
+}
+.custom-sider:not(.custom-sider-open):hover
+  .ant-menu
+  .ant-menu
+  .ant-menu
+  > .ant-menu-item {
+  display: flex;
+}
+
+/**
+ *  # Content
+ */
+.ant-layout-content {
+  padding: 2rem;
+  width: calc(100% - 335px - 4rem);
+  flex: calc(100% - 335px - 4rem);
+}
+.ant-layout-content.layout-crud-page {
+  padding: 0;
+}
+
+/**
+ *  # Footer
+ */
+.ant-layout-footer {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  box-shadow: 10px 0 10px 5px rgba(0, 0, 0, 0.01);
+}
